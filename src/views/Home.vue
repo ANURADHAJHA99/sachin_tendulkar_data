@@ -1,0 +1,189 @@
+<template>
+  <section className="lp-sec">
+      <div className="lp-image">
+        <Fade>
+          <img
+            src="/sachinMain.jpg"
+            alt="Sachin's poster"
+            className="img-card"
+          />
+        </Fade>
+      </div>
+      <div className="lp-content">
+        <Fade bottom delay={1000}>
+          <span className="pd-700 name">Sachin Tendulkar</span>
+          <p>
+            “Sachin Tendulkar is a former Indian cricketer, widely regarded to
+            be the greatest cricketer of all time. - <i>Wikipedia</i> ”
+            <br />
+            <br />
+            Does the data agree? Let's find out.
+          </p>
+         
+            <Fade bottom delay={10000}>
+              <button className="ssp-400 insights-button">
+                See career insights
+              </button>
+            </Fade>
+          
+        </Fade>
+      </div>
+      <div className="lp-border" />
+    </section>
+
+
+
+</template>
+
+<script>
+
+export default {
+  name: 'home',
+  components: {
+  },
+};
+</script>
+
+<style scoped>
+.lp-sec {
+  height: 100vh;
+  max-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #1b2136;
+  position: relative;
+}
+
+.num {
+  font-size: 150px;
+  font-family: monospace;
+}
+
+.name {
+  font-size: 40px;
+  background: #00c9ff;
+  background: -webkit-linear-gradient(to left, #92fe9d, #00c9ff);
+  background: linear-gradient(to left, #92fe9d, #00c9ff);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.lp-image {
+  width: 100%;
+  height: 370px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-card {
+  height: 85%;
+  width: auto;
+  border-radius: 7px;
+  box-shadow: 0px 4px 18px 0px rgba(0, 0, 0, 0.4);
+}
+
+.lp-content {
+  width: 100%;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.lp-content > p {
+  padding: 0px 10px 0px 20px;
+}
+
+.lp-subhead {
+  color: white;
+  font-size: 17px;
+}
+
+.insights-button {
+  height: 50px;
+  width: 200px;
+  text-decoration: none;
+  margin-top: 0px;
+  outline: none;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  color: #0d1b32;
+  border: 0px;
+  border-radius: 4px;
+  box-shadow: 0px 4px 18px 0px rgba(0, 0, 0, 0.4);
+}
+
+.insights-button:hover {
+  cursor: pointer;
+}
+
+.lp-border {
+  position: absolute;
+  height: 17px;
+  width: 100%;
+  bottom: 0px;
+  background: #00c6ff; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #0072ff,
+    #00c6ff
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #0072ff,
+    #00c6ff
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+@media screen and (min-width: 800px) {
+  .lp-sec {
+    flex-direction: row-reverse;
+  }
+
+  .lp-image,
+  .lp-content {
+    width: 50%;
+    height: 100%;
+  }
+
+  .lp-content {
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding-left: 80px;
+    padding-bottom: 250px;
+  }
+
+  .lp-content > p {
+    font-size: 25px;
+    padding: 0px;
+  }
+
+  .img-card {
+    border-radius: 0px;
+    box-shadow: none;
+    transition: all 400ms ease-in-out;
+  }
+
+  .img-card:hover {
+    box-shadow: 0px 4px 18px 0px rgba(0, 0, 0, 0.4);
+  }
+
+  .name {
+    font-size: 60px;
+  }
+
+  .insights-button {
+    height: 63px;
+    width: 270px;
+    font-size: 20px;
+  }
+}
+</style>
